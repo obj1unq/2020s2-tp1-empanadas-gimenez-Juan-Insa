@@ -2,17 +2,19 @@
 object galvan{
 	var sueldo = 15000
 	
+	method sueldo(cantidad){
+		sueldo = cantidad
+	}
 	method sueldo(){
 		return sueldo
 	}
 }
 
 object baigorria{
-	var sueldo = vender * 15
 	var vender = 0
 	
 	method sueldo(){
-		return sueldo
+		return vender * 15
 	}
 	method vender(cantidad){
 		vender = vender + cantidad
@@ -30,9 +32,5 @@ object gimenez{
 	}
 	method pagarSueldo(empleado){
 		fondo = fondo - empleado.sueldo()
-		if (empleado == "baigorria"){
-			empleado.resetVender()
-		}
-		
 	}
 }
