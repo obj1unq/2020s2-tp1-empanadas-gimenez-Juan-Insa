@@ -29,7 +29,8 @@ object baigorria{
 		return totalCobrado
 	}
 	method cobroTotal(){
-		totalCobrado = totalCobrado + self.sueldo() 
+		totalCobrado = totalCobrado + self.sueldo();
+		self.resetVender() 
 	}
 }
 object gimenez{
@@ -41,8 +42,5 @@ object gimenez{
 	method pagarSueldo(empleado){
 		fondo = fondo - empleado.sueldo()
 		empleado.cobroTotal()
-		if(empleado == baigorria){
-			empleado.resetVender()
-		}
 	}
 }
