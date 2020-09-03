@@ -22,11 +22,11 @@ object galvan{
 	
 	method cobroTotal(){
         dinero = 0.max(sueldo - deuda)
-        deuda = 0.max(deuda - dinero)
+        deuda = 0.max(deuda - sueldo)
     }
     
     method gastar(monto){
-    	deuda = 0.max(monto - dinero)
+    	deuda = deuda + 0.max(monto - dinero)
     	dinero = 0.max(dinero - monto)
     }
 }
